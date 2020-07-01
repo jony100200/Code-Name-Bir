@@ -4,7 +4,7 @@ using UnityEngine;
 public class EnemyPathing : MonoBehaviour
 {
     protected WaveConfiguration _waveConfiguration;
-    protected List<Transform> _wayPoints;
+    protected List<Transform> _wayPoints = new List<Transform>();
 
     protected int _wayPtIndex;
 
