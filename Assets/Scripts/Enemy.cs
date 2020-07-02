@@ -42,7 +42,7 @@ public class Enemy : MonoBehaviour
         GameObject bullet = Instantiate(
             _projectile, transform.position, Quaternion.identity
         )as GameObject;
-        _projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -_projectileSpeed);
+        bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -_projectileSpeed);
     }
 
     protected void OnTriggerEnter2D(Collider2D other)
