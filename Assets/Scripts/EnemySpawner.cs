@@ -11,8 +11,9 @@ public class EnemySpawner : MonoBehaviour
     void Start()
     {
         var currentWave = _waveConfigurations[_startingWave];
+        StartCoroutine(SpawningAllWaves());
         //Debug.Log(currentWave);
-        StartCoroutine(SpawnAllEnemiesInWave(currentWave));
+        //StartCoroutine(SpawnAllEnemiesInWave(currentWave));
     }
 
     protected IEnumerator SpawningAllWaves()
