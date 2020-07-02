@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8054149621109389166}
   - component: {fileID: 8054149621109389167}
   - component: {fileID: -1493342384424094598}
+  - component: {fileID: 6308822462814576779}
+  - component: {fileID: -8006616400376019871}
   m_Layer: 0
   m_Name: Enemy 1
   m_TagString: Untagged
@@ -94,3 +96,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d80268a1086ed6840883ff1a2e58fe26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &6308822462814576779
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8054149621109389152}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.003531061, y: -0.020560399}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.48, y: 0.48}
+    newSize: {x: 0.48, y: 0.48}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.2446164, y: 0.40501544}
+  m_EdgeRadius: 0
+--- !u!114 &-8006616400376019871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8054149621109389152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 305c9ecd0f887d342a3d69587f240a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hp: 600
+  _shotCounter: 0
+  _minTimeBetweenShots: 0.2
+  _maxTimeBetweenShots: 3
+  _projectile: {fileID: 8440927872843028359, guid: 31c1f983944c4424aba12c1864920353,
+    type: 3}
+  _projectileSpeed: 10
