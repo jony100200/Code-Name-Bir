@@ -19,6 +19,11 @@ public class PlayerController : MonoBehaviour
     protected float xMin;
     protected float yMax;
     protected float yMin;
+    [Header("SFX ")]
+    [SerializeField] protected AudioClip _deathSFX;
+    [SerializeField] protected AudioClip _shootSFX;
+    [SerializeField] [Range(0, 1)] protected float _deathSFXVolume = 0.6f;
+    [SerializeField] [Range(0, 1)] protected float _shootSFXVolume = 0.6f;
 
     // Start is called before the first frame update
     private void Start()
@@ -49,9 +54,16 @@ public class PlayerController : MonoBehaviour
         doingDamage.GetHit();
         if (_hp <= 0)
         {
-            Destroy(gameObject);
-            Explosion();
+           Die();
         }
+    }
+
+    protected void Die()
+    {
+        Explosion();
+        AudioSource.PlayClipAtPoint(_deathSFX, Camera.main.transform.position, _deathSFXVolume);
+        Destroy(gameObject);
+        Destroy(gameObject);
     }
     //player movement code
     protected void Move()
@@ -79,7 +91,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             _firingCoroutine=StartCoroutine(RapidFire());
-            // _shoot.Play();
+            
         }
 
         if (Input.GetButtonUp("Fire1"))
@@ -87,12 +99,14 @@ public class PlayerController : MonoBehaviour
             StopCoroutine(_firingCoroutine);
         }
     }
-    //to fire bullets continuously
+    
     protected void Explosion()
     {
         GameObject explode = Instantiate(_explosion, transform.position, Quaternion.identity
         ) as GameObject;
+        Destroy(explode, 1);
     }
+    //to fire bullets continuously
     IEnumerator RapidFire()
     {
         while (true)
@@ -101,6 +115,7 @@ public class PlayerController : MonoBehaviour
                 transform.position,
                 Quaternion.identity);
             bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0, _projectileSpeed);
+            AudioSource.PlayClipAtPoint(_shootSFX, Camera.main.transform.position, _shootSFXVolume);
             yield return new WaitForSeconds(_projectileFiringInterval);
         }
         

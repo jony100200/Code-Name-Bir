@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 305c9ecd0f887d342a3d69587f240a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hp: 400
+  _hp: 100
   _shotCounter: 0
   _minTimeBetweenShots: 0.2
   _maxTimeBetweenShots: 3
@@ -117,6 +117,10 @@ MonoBehaviour:
   _explosion: {fileID: 1549379729886315670, guid: 0c260514e319e8349bdddc419c11d32f,
     type: 3}
   _projectileSpeed: 10
+  _deathSFX: {fileID: 8300000, guid: d5068baa0ac768b499e9e8b55fa084cd, type: 3}
+  _shootSFX: {fileID: 8300000, guid: fa27e206e3a6c854a9548b1ae55efc30, type: 3}
+  _deathSFXVolume: 0.6
+  _shootSFXVolume: 0.5
 --- !u!61 &5036307086577450718
 BoxCollider2D:
   m_ObjectHideFlags: 0

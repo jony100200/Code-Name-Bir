@@ -134,10 +134,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 305c9ecd0f887d342a3d69587f240a1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _hp: 600
+  _hp: 200
   _shotCounter: 0
   _minTimeBetweenShots: 0.2
   _maxTimeBetweenShots: 3
   _projectile: {fileID: 8440927872843028359, guid: 31c1f983944c4424aba12c1864920353,
     type: 3}
+  _explosion: {fileID: 1549379729886315670, guid: 0c260514e319e8349bdddc419c11d32f,
+    type: 3}
   _projectileSpeed: 10
+  _deathSFX: {fileID: 8300000, guid: d5068baa0ac768b499e9e8b55fa084cd, type: 3}
+  _shootSFX: {fileID: 8300000, guid: abd7ecae3deda644a93718f917fe0ab6, type: 3}
+  _deathSFXVolume: 0.6
+  _shootSFXVolume: 0.6

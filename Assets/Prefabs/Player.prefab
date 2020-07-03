@@ -69,8 +69,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1172674743
-  m_SortingLayer: 3
+  m_SortingLayerID: -1703839965
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d39b9d5d2961cb748b04a39616ca1e69, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -102,7 +102,12 @@ MonoBehaviour:
   _projectileFiringInterval: 0.2
   _bulletPrefab: {fileID: 2538188885078271539, guid: 956cac9c1719b644ba79035467a952fe,
     type: 3}
-  _explosion: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
+  _explosion: {fileID: 1549379729886315670, guid: 34c4d981f00c8db47b74085d09d2bb1c,
+    type: 3}
+  _deathSFX: {fileID: 8300000, guid: 451ab372b8592194f94972a3b01d3601, type: 3}
+  _shootSFX: {fileID: 8300000, guid: ff471fc98792ae14185800f2a55b26a9, type: 3}
+  _deathSFXVolume: 0.6
+  _shootSFXVolume: 0.12
 --- !u!60 &4792047733691529725
 PolygonCollider2D:
   m_ObjectHideFlags: 0
