@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -1493342384424094598}
   - component: {fileID: 6308822462814576779}
   - component: {fileID: -8006616400376019871}
+  - component: {fileID: -1445170080609782659}
   m_Layer: 9
   m_Name: Enemy 1
   m_TagString: Untagged
@@ -106,7 +107,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.003531061, y: -0.020560399}
@@ -147,3 +148,16 @@ MonoBehaviour:
   _shootSFX: {fileID: 8300000, guid: abd7ecae3deda644a93718f917fe0ab6, type: 3}
   _deathSFXVolume: 0.6
   _shootSFXVolume: 0.6
+--- !u!114 &-1445170080609782659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8054149621109389152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b75eb5e148edec4189a1ff16df58081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 200

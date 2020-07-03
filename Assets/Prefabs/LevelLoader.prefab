@@ -43,3 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 131f2e70d3c27eb4ab4e29e00701ad35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _clickSFX: {fileID: 8300000, guid: c4282603c3d5b6a468efed933b9332ee, type: 3}
+  _clickSFXVolume: 0.6
+  _delayLoadingInSeconds: 2

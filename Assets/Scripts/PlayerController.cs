@@ -60,6 +60,7 @@ public class PlayerController : MonoBehaviour
 
     protected void Die()
     {
+        FindObjectOfType<Level>().LoadGameOver();
         Explosion();
         AudioSource.PlayClipAtPoint(_deathSFX, Camera.main.transform.position, _deathSFXVolume);
         Destroy(gameObject);
