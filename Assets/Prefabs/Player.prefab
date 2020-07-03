@@ -102,6 +102,7 @@ MonoBehaviour:
   _projectileFiringInterval: 0.2
   _bulletPrefab: {fileID: 2538188885078271539, guid: 956cac9c1719b644ba79035467a952fe,
     type: 3}
+  _explosion: {fileID: 139366, guid: b185c1a9cf067374586d095111b15bd1, type: 3}
 --- !u!60 &4792047733691529725
 PolygonCollider2D:
   m_ObjectHideFlags: 0

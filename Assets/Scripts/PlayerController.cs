@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] protected float _projectileSpeed;
     [SerializeField] protected float _projectileFiringInterval;
     [SerializeField] protected GameObject _bulletPrefab;
+    [SerializeField] protected GameObject _explosion;
     protected Coroutine _firingCoroutine;
     //[SerializeField] protected AudioSource _firing;
     protected float xMax;
@@ -49,6 +50,7 @@ public class PlayerController : MonoBehaviour
         if (_hp <= 0)
         {
             Destroy(gameObject);
+            Explosion();
         }
     }
     //player movement code
@@ -86,6 +88,11 @@ public class PlayerController : MonoBehaviour
         }
     }
     //to fire bullets continuously
+    protected void Explosion()
+    {
+        GameObject explode = Instantiate(_explosion, transform.position, Quaternion.identity
+        ) as GameObject;
+    }
     IEnumerator RapidFire()
     {
         while (true)

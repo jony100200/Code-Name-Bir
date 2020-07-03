@@ -14,6 +14,9 @@ public class DoingDamage : MonoBehaviour
 
     public void GetHit()
     {
+        //gameObject effect= Instantiate(
+        //);
         Destroy(gameObject);
     }
+
 }

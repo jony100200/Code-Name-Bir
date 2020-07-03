@@ -13,6 +13,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] protected float _maxTimeBetweenShots = 3f;
 
     [SerializeField] protected GameObject _projectile;
+    [SerializeField] protected GameObject _explosion;
 
     [SerializeField] protected float _projectileSpeed=-10f;
     // Start is called before the first frame update
@@ -45,6 +46,12 @@ public class Enemy : MonoBehaviour
         bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -_projectileSpeed);
     }
 
+    protected void Explosion()
+    {
+        GameObject explode = Instantiate(_explosion,transform.position,Quaternion.identity
+        ) as GameObject;
+    }
+
     protected void OnTriggerEnter2D(Collider2D other)
     {
         DoingDamage doingDamage= other.gameObject.GetComponent<DoingDamage>();
@@ -62,6 +69,7 @@ public class Enemy : MonoBehaviour
         if (_hp <=0)
         {
             Destroy(gameObject);
+            Explosion();
         }
     }
 }

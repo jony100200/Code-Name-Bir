@@ -114,6 +114,8 @@ MonoBehaviour:
   _maxTimeBetweenShots: 3
   _projectile: {fileID: 8440927872843028359, guid: 31c1f983944c4424aba12c1864920353,
     type: 3}
+  _explosion: {fileID: 1549379729886315670, guid: 0c260514e319e8349bdddc419c11d32f,
+    type: 3}
   _projectileSpeed: 10
 --- !u!61 &5036307086577450718
 BoxCollider2D:
