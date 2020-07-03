@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7419914667013432222}
   - component: {fileID: 9053715318034830430}
   - component: {fileID: 8082226258440617843}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Enemy Laser
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0015759394, y: 0.007879674}

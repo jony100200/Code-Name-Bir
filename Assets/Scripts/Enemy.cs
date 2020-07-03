@@ -48,13 +48,17 @@ public class Enemy : MonoBehaviour
     protected void OnTriggerEnter2D(Collider2D other)
     {
         DoingDamage doingDamage= other.gameObject.GetComponent<DoingDamage>();
+        if (!doingDamage)
+        {
+            return;
+        }
         DestroyEnemy(doingDamage);
-        
     }
 
     protected void DestroyEnemy(DoingDamage doingDamage)
     {
         _hp -= doingDamage.GetDamaged();
+        doingDamage.GetHit();
         if (_hp <=0)
         {
             Destroy(gameObject);

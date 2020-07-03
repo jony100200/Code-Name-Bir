@@ -18,5 +18,5 @@ MonoBehaviour:
   _numberOfEnemies: 4
   _pathPrefab: {fileID: 3781848207585956581, guid: ce3e2da5e7d09e3488def5f7b744613c,
     type: 3}
-  _spawnRandomness: 0.3
-  _timeBetweenSpawns: 0.1
+  _spawnRandomness: 0.2
+  _timeBetweenSpawns: 0.4

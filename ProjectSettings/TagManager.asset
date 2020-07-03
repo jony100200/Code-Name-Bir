@@ -13,10 +13,10 @@ TagManager:
   - UI
   - 
   - 
-  - test
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - Player Projectile
+  - Enemy Projectile
   - 
   - 
   - 

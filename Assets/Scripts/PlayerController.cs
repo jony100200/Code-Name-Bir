@@ -3,16 +3,15 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] protected GameObject _bulletPrefab;
-
+    [Header("Player ")]
     [SerializeField] protected float _moveSpeed;
-
     //doing offset so we player ship don't go off-screen
     [SerializeField] protected float _playerOffset;
+    [SerializeField] protected int _hp=200;
+    [Header("Projectile")]
     [SerializeField] protected float _projectileSpeed;
-
     [SerializeField] protected float _projectileFiringInterval;
-
+    [SerializeField] protected GameObject _bulletPrefab;
     protected Coroutine _firingCoroutine;
     //[SerializeField] protected AudioSource _firing;
     protected float xMax;
@@ -32,6 +31,25 @@ public class PlayerController : MonoBehaviour
     {
         Move();
         Fire();
+    }
+    protected void OnTriggerEnter2D(Collider2D other)
+    {
+        DoingDamage doingDamage = other.gameObject.GetComponent<DoingDamage>();
+        if (!doingDamage)
+        {
+            return;
+        }
+        DestroyPlayer(doingDamage);
+    }
+
+    protected void DestroyPlayer(DoingDamage doingDamage)
+    {
+        _hp -= doingDamage.GetDamaged();
+        doingDamage.GetHit();
+        if (_hp <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
     //player movement code
     protected void Move()
