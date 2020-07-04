@@ -1,0 +1,6 @@
+if customer rating>set value
+then awesome job and display certain dialogues
+if customer rating<1
+then bad news then display negative ones
+if customer rating==1
+then good job n display satisfied dialogues
