@@ -64,7 +64,7 @@ public class PlayerController : MonoBehaviour
         Explosion();
         AudioSource.PlayClipAtPoint(_deathSFX, Camera.main.transform.position, _deathSFXVolume);
         Destroy(gameObject);
-        Destroy(gameObject);
+        
     }
     //player movement code
     protected void Move()
